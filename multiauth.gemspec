@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
     "config/initializers/omniauth.rb",
     "config/routes.rb",
     "lib/multiauth.rb",
+    "multiauth.gemspec",
     "spec/multiauth_spec.rb",
     "spec/spec_helper.rb"
   ]
