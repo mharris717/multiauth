@@ -34,6 +34,8 @@ Gem::Specification.new do |s|
     "config/initializers/devise.rb",
     "config/initializers/omniauth.rb",
     "config/routes.rb",
+    "db/migrate/create_identities.rb",
+    "db/migrate/create_users.rb",
     "lib/multiauth.rb",
     "multiauth.gemspec",
     "spec/multiauth_spec.rb",
