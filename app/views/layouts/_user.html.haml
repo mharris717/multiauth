@@ -1,0 +1,17 @@
+- if current_user 
+  Logged In 
+  = current_user.email 
+  = link_to "Logout",destroy_user_session_path, :method => :delete
+  %br
+  - Provider.all.each do |provider|
+    - if !current_user.has_identity?(provider)
+      = link_to "Sign in with #{provider}", user_omniauth_authorize_path(provider)
+    - else
+      = "Has identity for #{provider}"
+      = link_to "Reset", user_omniauth_authorize_path(provider)
+    %br
+- else 
+  - Provider.all.each do |provider|
+    = link_to "Sign in with #{provider}", user_omniauth_authorize_path(provider)
+    %br
+%br

@@ -8,7 +8,18 @@ source "http://rubygems.org"
 group :development do
   gem "rspec", "~> 2.8.0"
   gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.0.0"
+  gem "bundler", "~> 1.1"
   gem "jeweler", "~> 1.8.4"
-  gem "rcov", ">= 0"
+ # gem "rcov", ">= 0"
 end
+
+gem 'haml'
+gem 'mharris_ext'
+gem 'devise'
+
+gem 'omniauth', '~> 1.1'
+gem 'omniauth-oauth2'
+gem 'omniauth-putio', :git => "https://github.com/happydawn/omniauth-putio.git"
+gem 'omniauth-dropbox'
+gem 'omniauth-evernote'
+gem "omniauth-google-oauth2"
