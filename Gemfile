@@ -19,7 +19,7 @@ gem 'devise'
 
 gem 'omniauth', '~> 1.1'
 gem 'omniauth-oauth2'
-gem 'omniauth-putio', :git => "https://github.com/happydawn/omniauth-putio.git"
+gem 'omniauth-putio'#, :git => "https://github.com/happydawn/omniauth-putio.git"
 gem 'omniauth-dropbox'
 gem 'omniauth-evernote'
 gem "omniauth-google-oauth2"
