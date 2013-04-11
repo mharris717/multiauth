@@ -12,6 +12,7 @@ class Identity < ActiveRecord::Base
   end
 
   class Refresh
+    require 'httparty'
     include HTTParty
     base_uri "accounts.google.com:443"
 
