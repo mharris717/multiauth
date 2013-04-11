@@ -23,3 +23,5 @@ gem 'omniauth-putio'#, :git => "https://github.com/happydawn/omniauth-putio.git"
 gem 'omniauth-dropbox'
 gem 'omniauth-evernote'
 gem "omniauth-google-oauth2"
+
+gem 'httparty'
