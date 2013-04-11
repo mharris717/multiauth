@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2013-03-12"
+  s.date = "2013-04-11"
   s.description = "multiauth"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -60,6 +60,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<omniauth-dropbox>, [">= 0"])
       s.add_runtime_dependency(%q<omniauth-evernote>, [">= 0"])
       s.add_runtime_dependency(%q<omniauth-google-oauth2>, [">= 0"])
+      s.add_runtime_dependency(%q<httparty>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, ["~> 1.1"])
@@ -74,6 +75,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<omniauth-dropbox>, [">= 0"])
       s.add_dependency(%q<omniauth-evernote>, [">= 0"])
       s.add_dependency(%q<omniauth-google-oauth2>, [">= 0"])
+      s.add_dependency(%q<httparty>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, ["~> 1.1"])
@@ -89,6 +91,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<omniauth-dropbox>, [">= 0"])
     s.add_dependency(%q<omniauth-evernote>, [">= 0"])
     s.add_dependency(%q<omniauth-google-oauth2>, [">= 0"])
+    s.add_dependency(%q<httparty>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, ["~> 1.1"])
