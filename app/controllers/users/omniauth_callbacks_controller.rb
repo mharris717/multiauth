@@ -90,4 +90,23 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       raise "no user"
     end
   end
+
+  def fatsecret
+    require 'pp'
+
+    File.open("tmp/params.txt","a") do |f|
+      PP.pp(request.env["omniauth.auth"],f)
+      PP.pp(params,f)
+    end
+
+    @user = User.find_for_fatsecret(request.env['omniauth.auth'], current_user)
+    
+    if @user.persisted?
+      sign_in_and_redirect @user
+      set_flash_message(:notice, :success, :kind => "FatSecret") if is_navigational_format?
+    else
+      raise "no user"
+    end
+  end
 end
+
