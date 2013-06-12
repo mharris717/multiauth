@@ -46,8 +46,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_for_dropbox_oauth(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?
-      sign_in_and_redirect @user
-      set_flash_message(:notice, :success, :kind => "Dropbox") if is_navigational_format?
+      if session[:from_app]
+        sign_in @user
+        redirect_to app_url(@user)
+      else
+        sign_in_and_redirect @user
+        set_flash_message(:notice, :success, :kind => "Dropbox") if is_navigational_format?
+      end
     else
       raise "no user"
     end
