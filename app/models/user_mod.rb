@@ -31,8 +31,6 @@ module UserMod
       UserFind.get(auth, :current_user => signed_in_resource)
     end
 
-    puts 'find for fatsecret method'
-
     def find_for_fatsecret(auth, signed_in_resource=nil)
       UserFind.get(auth, :current_user => signed_in_resource)
     end
